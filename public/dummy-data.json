@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "AI Resume Builder",
+    "description": "Build professional resumes with AI suggestions and ATS optimization.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "badge-success",
+    "features": ["ATS-friendly templates", "AI content suggestions", "Export to PDF"],
+    "icon": "/products/portfolio.png"
+  },
+  {
+    "id": 2,
+    "name": "Social Media Scheduler",
+    "description": "Plan, schedule, and automate posts across multiple platforms.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "badge-warning",
+    "features": ["Multi-platform posting", "Content calendar", "Analytics dashboard"],
+    "icon": "/products/social-media.png"
+  },
+  {
+    "id": 3,
+    "name": "AI Content Generator",
+    "description": "Generate blog posts, captions, and marketing copy instantly.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "badge-success",
+    "features": ["SEO optimized content", "Multiple writing tones", "Fast generation"],
+    "icon": "/products/content-generator.png"
+  },
+  {
+    "id": 4,
+    "name": "Portfolio Builder",
+    "description": "Create and host a personal portfolio without coding.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "badge-info",
+    "features": ["Custom themes", "Drag and drop editor", "Live hosting"],
+    "icon": "/products/portfolio.png"
+  },
+  {
+    "id": 5,
+    "name": "Design Asset Library",
+    "description": "Access thousands of icons, illustrations, and UI kits.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "badge-warning",
+    "features": ["10k+ assets", "Commercial license", "Regular updates"],
+    "icon": "/products/design-tool.png"
+  },
+  {
+    "id": 6,
+    "name": "Email Marketing Tool",
+    "description": "Create and manage email campaigns with automation.",
+    "price": 10,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "badge-success",
+    "features": ["Email templates", "Automation workflows", "Open rate tracking"],
+    "icon": "/products/operation.png"
+  },
+  {
+    "id": 7,
+    "name": "Website Analytics Tool",
+    "description": "Track user behavior and performance of your website.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "badge-info",
+    "features": ["Real-time tracking", "User insights", "Traffic reports"],
+    "icon": "/products/operation.png"
+  },
+  {
+    "id": 8,
+    "name": "Code Snippet Manager",
+    "description": "Save, organize, and reuse your code snippets efficiently.",
+    "price": 7,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "badge-success",
+    "features": ["Cloud sync", "Tag organization", "Search snippets"],
+    "icon": "/products/content-generator.png"
+  },
+  {
+    "id": 9,
+    "name": "AI Image Generator",
+    "description": "Generate high-quality images from text prompts.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "badge-warning",
+    "features": ["Text to image", "High resolution output", "Style variations"],
+    "icon": "/products/design-tool.png"
+  }
+]
