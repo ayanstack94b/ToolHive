@@ -14,3 +14,4 @@ body {
 .gradient-primary:hover {
   @apply opacity-90;
 }
+/* bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-4xl  hover:opacity-70 transition-opacity duration-500 */

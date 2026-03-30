@@ -1,6 +1,6 @@
 import React from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
-
+import favicon from '../../../src/assets/favicon.png';
 const Navbar = () => {
     const link = <>
         <li><a href='/' className='font-semibold'>Products</a></li>
@@ -23,7 +23,7 @@ const Navbar = () => {
                         {link}
                     </ul>
                 </div>
-                <a className="md:text-2xl text-xl font-bold md:font-extrabold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent">ToolHive</a>
+                <p className="flex items-center justify-center gap-1 md:text-2xl text-xl font-bold md:font-extrabold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent"><img className='w-8.5 h-8.5 hidden md:block' src={favicon} alt="" /> ToolHive</p>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -32,8 +32,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-4">
                 <CiShoppingCart size={30} />
-                <p className="">Login</p>
-                <a className="btn">Button</a>
+                <p className="text-lg font-medium">Login</p>
+                <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-4xl  hover:opacity-70 transition-opacity duration-500">Get started</a>
             </div>
         </div>
     );
