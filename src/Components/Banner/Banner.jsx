@@ -31,7 +31,7 @@ const Banner = () => {
 
                     {/* left div btn group */}
                     <div className="md:flex md:items-start space-y-4 ">
-                        <button className="md:ml-0 ml-3 px-5 py-1 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-4xl  hover:opacity-70 transition-opacity duration-500">Explore Products</button>
+                        <button className="md:ml-0 ml-3 border border-[#9514fa] px-5 py-1 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-4xl  hover:opacity-70 transition-opacity duration-500">Explore Products</button>
 
                         <button className=" flex font-semibold justify-center border border-[#9514fa] items-center px-2 py-1 ml-3 gap-2 to-[#9514fa] bg-white text-[#9514fa] rounded-4xl  hover:opacity-70 transition-opacity duration-500">
                             <img className='w-4 h-4' src={playBtn} alt="" />
