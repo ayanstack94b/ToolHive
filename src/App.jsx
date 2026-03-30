@@ -1,4 +1,6 @@
 import './App.css'
+import Banner from './Components/Banner/Banner'
+import Navbar from './Components/Navbar/Navbar'
 
 
 
@@ -7,8 +9,15 @@ import './App.css'
 function App() {
   return (
     <>
-          <h1 className='text-red-500'>Get started</h1>
+      <header className='container mx-auto'>
+        <Navbar></Navbar>
+        <Banner></Banner>
+      </header>
+      <main>
+
+      </main>
       
+
     </>
   )
 }
