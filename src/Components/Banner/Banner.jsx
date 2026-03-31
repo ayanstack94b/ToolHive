@@ -21,7 +21,7 @@ const Banner = () => {
                             Supercharge Your
                         </h1>
 
-                        <h1 className="text-3xl md:text-5xl font-extrabold"> Digital Workflow</h1>
+                        <h1 className="text-3xl md:text-5xl font-extrabold">Digital Workflow</h1>
                     </div>
                     <p className="text-[#627382] text-sm max-w-md">
                         Access premium AI tools, design assets, templates, and productivity 
@@ -37,10 +37,7 @@ const Banner = () => {
                             <img className='w-4 h-4' src={playBtn} alt="" />
                             Explore Products</button>
                     </div>
-
                 </div>
-
-
             </div>
 
             {/* right div */}
