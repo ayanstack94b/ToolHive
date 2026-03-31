@@ -1,10 +1,14 @@
 import React from 'react';
 import CartItem from './CartItem';
+import { toast } from 'react-toastify';
 
 const Cart = ({ cart, setCart, handleRemoveFromCart }) => {
     // console.log('cart data', cart.price);
-
-
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const handleCheckOut=()=>{
+        setCart([])
+        toast.success('Order placed successfully')
+    }
     return (
         <div>
             {
@@ -42,32 +46,14 @@ const Cart = ({ cart, setCart, handleRemoveFromCart }) => {
 
                         {/* Cart total */}
                         <div className="flex justify-between items-center w-11/12 mx-auto">
-                            <p className="text-gray-400 text-lg">Total:</p>
-                            <p className="font-bold">$</p>
+                            <p className="text-gray-500 text-lg">Total:</p>
+                            <p className="font-bold text-xl">${total}</p>
                         </div>
-                        <button  className="btn my-5 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Proceed to Checkout</button>
+                        <button onClick={handleCheckOut} className="btn my-5 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Proceed to Checkout</button>
                     </div>)
             }
 
         </div>
-
-        // {/* <div className="border border-gray-200 p-10 rounded-xl">
-        //         <h1 className='text-left font-bold text-xl'>Your Cart</h1>
-        //         {
-        //             cart.map((cartItems, i) => <CartItem
-        //                 key={i}
-        //                 cartItems={cartItems}
-        //                 setCart={setCart}
-        //             ></CartItem>)
-        //         }
-
-        //         {/* Cart total */}
-        //         <div className="flex justify-between items-center w-11/12 mx-auto">
-        //             <p className="text-gray-400 text-lg">Total:</p>
-        //             <p className="font-bold">$</p>
-        //         </div>
-        //         <button className="btn my-5 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Proceed to Checkout</button>
-        //     </div > */}
     );
 };
 

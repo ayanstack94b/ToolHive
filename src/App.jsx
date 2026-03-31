@@ -32,7 +32,7 @@ function App() {
   
   const handleRemoveFromCart = (id) => {
     console.log('deleted', id, cart);
-    const newCart = cart.filter((item) => item.id != id)
+    const newCart = cart.filter((item) => item.id !== id)
     toast.error('Product removed from cart')
     setCart(newCart)
     return
