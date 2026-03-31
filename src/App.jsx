@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
@@ -12,17 +13,24 @@ const fetchData = async () => {
 const dataPromise = fetchData()
 
 
-
 function App() {
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (cards) => {
+    console.log('clicked btn', cards);
+    const newCartState = [...cart, cards]
+    setCart(newCartState)
+  }
+
   return (
     <>
       <header className='container mx-auto'>
-        <Navbar></Navbar>
+        <Navbar cart={cart} handleAddToCart={handleAddToCart} setCart={setCart}></Navbar>
         <Banner></Banner>
       </header>
       <main>
         <Stats></Stats>
-        <ToggleTabs dataPromise={dataPromise}></ToggleTabs>
+        <ToggleTabs handleAddToCart={handleAddToCart} cart={cart} setCart={setCart} dataPromise={dataPromise}></ToggleTabs>
       </main>
 
 

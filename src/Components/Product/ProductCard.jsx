@@ -1,14 +1,17 @@
 import React from 'react';
 import { BiColor } from 'react-icons/bi';
+import Cart from '../Cart/Cart';
 
-const ProductCard = ({ card }) => {
-    console.log('card', card);
+const ProductCard = ({ card, cart, setCart, handleAddToCart }) => {
+    // console.log('card', card);
     const tagStyles = {
         popular: "badge-warning",
         "best seller": "badge-success",
         new: "badge-info",
-        
+
     };
+
+   
 
     return (
         <div className="card bg-base-400 h-full flex flex-col shadow-sm hover:shadow-2xl transition-shadow duration-300">
@@ -47,7 +50,7 @@ const ProductCard = ({ card }) => {
                 </div>
                 {/* button div */}
                 <div className="mt-6">
-                    <button className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Buy now</button>
+                    <button onClick={() => handleAddToCart(card)} className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Buy now</button>
                 </div>
             </div>
         </div>

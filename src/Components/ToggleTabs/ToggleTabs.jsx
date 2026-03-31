@@ -3,18 +3,19 @@ import Cart from '../Cart/Cart';
 import ProductCard from '../Product/ProductCard';
 import ProductList from '../Product/ProductList';
 
-const ToggleTabs = ({ dataPromise }) => {
+const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart }) => {
 
 
     const [tab, setTab] = useState('products')
 
     const handleProductsBtn = (products) => {
-        console.log('products clicked', products);
-      return  setTab(products)
+        // console.log('products clicked', products);
+        return setTab(products)
     }
-    const handleCartBtn = (cart) => {
-        console.log('cart clicked', cart);
-      return  setTab(cart)
+    const handleCartBtn = (cartData) => {
+        // console.log('cart clicked', cart);
+        return setTab(cartData)
+
     }
 
     return (
@@ -33,16 +34,16 @@ const ToggleTabs = ({ dataPromise }) => {
 
                 <div className="container mx-auto w-6/12 flex items-center justify-center gap-4">
                     <button onClick={() => handleProductsBtn('products')} className="btn px-6 py-1 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-full">Products</button>
-                    <button onClick={() => handleCartBtn('cart')} className="btn px-8 py-1 rounded-full bg-white text-black font-bold">Cart</button>
-              
+                    <button onClick={() => handleCartBtn('cart')} className="btn px-8 py-1 rounded-full bg-white text-black font-bold">Cart<span className='text-gray-500 font-medium'>({cart.length})</span></button>
+
                 </div>
             </section>
 
             {/* dynamic data card section */}
             <section>
                 {
-                    tab === 'products' ? <ProductList 
-                    dataPromise={dataPromise}/> : <Cart></Cart>
+                    tab === 'products' ? <ProductList handleAddToCart={handleAddToCart}
+                        dataPromise={dataPromise} /> : <Cart cart={cart} setCart={setCart}></Cart>
                 }
 
             </section>
