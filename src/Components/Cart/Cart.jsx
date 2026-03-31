@@ -45,7 +45,7 @@ const Cart = ({ cart, setCart, handleRemoveFromCart }) => {
                             <p className="text-gray-400 text-lg">Total:</p>
                             <p className="font-bold">$</p>
                         </div>
-                        <button className="btn my-5 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Proceed to Checkout</button>
+                        <button  className="btn my-5 bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Proceed to Checkout</button>
                     </div>)
             }
 

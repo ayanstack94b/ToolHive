@@ -4,6 +4,7 @@ import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
 import Stats from './Components/Stats/Stats'
 import ToggleTabs from './Components/ToggleTabs/ToggleTabs'
+import { toast } from 'react-toastify';
 
 const fetchData = async () => {
   const res = await fetch('/public/dummy-data.json')
@@ -17,16 +18,22 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const handleAddToCart = (cards) => {
+    const exists = cart.some(item => item.id === cards.id);
+    
+    if (exists) {
+      toast.warning("Item already in cart");
+      return;
+    }
     const newCartState = [...cart, cards]
-    // console.log('clicked btn from app jsx', newCartState); 
-    alert('added')
+    toast.success('Product added to cart')
+
     setCart(newCartState)
   }
   
   const handleRemoveFromCart = (id) => {
     console.log('deleted', id, cart);
     const newCart = cart.filter((item) => item.id != id)
-    alert('Removed')
+    toast.error('Product removed from cart')
     setCart(newCart)
     return
   }
