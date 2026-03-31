@@ -2,7 +2,7 @@ import React from 'react';
 import { BiColor } from 'react-icons/bi';
 import Cart from '../Cart/Cart';
 
-const ProductCard = ({ card, cart, setCart, handleAddToCart }) => {
+const ProductCard = ({ card, handleAddToCart }) => {
     // console.log('card', card);
     const tagStyles = {
         popular: "badge-warning",
@@ -10,8 +10,6 @@ const ProductCard = ({ card, cart, setCart, handleAddToCart }) => {
         new: "badge-info",
 
     };
-
-   
 
     return (
         <div className="card bg-base-400 h-full flex flex-col shadow-sm hover:shadow-2xl transition-shadow duration-300">

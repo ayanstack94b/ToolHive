@@ -1,8 +1,10 @@
 import React from 'react';
 import { CiShoppingCart } from 'react-icons/ci';
 import favicon from '../../../src/assets/favicon.png';
-const Navbar = ({ cart, setCart, handleAddToCart }) => {
-    console.log('cart state', cart.length);
+import CartItem from '../Cart/CartItem';
+const Navbar = ({ cart }) => {
+    // console.log('cart state', cart.length);
+   
     const link = <>
         <li><a href='/' className='font-semibold'>Products</a></li>
         <li><a href='/' className='font-semibold'>Features</a></li>

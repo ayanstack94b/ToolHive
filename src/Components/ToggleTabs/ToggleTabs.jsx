@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import ProductCard from '../Product/ProductCard';
 import ProductList from '../Product/ProductList';
 
-const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart }) => {
+const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart, handleRemoveFromCart }) => {
 
 
     const [tab, setTab] = useState('products')
@@ -43,7 +43,7 @@ const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart }) => {
             <section>
                 {
                     tab === 'products' ? <ProductList handleAddToCart={handleAddToCart}
-                        dataPromise={dataPromise} /> : <Cart cart={cart} setCart={setCart}></Cart>
+                        dataPromise={dataPromise} /> : <Cart handleRemoveFromCart={handleRemoveFromCart} cart={cart} handleAddToCart={handleAddToCart} setCart={setCart}></Cart>
                 }
 
             </section>

@@ -7,11 +7,5 @@ body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
 }
-.gradient-primary {
-  @apply bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white;
-}
 
-.gradient-primary:hover {
-  @apply opacity-90;
-}
 /* bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-4xl  hover:opacity-70 transition-opacity duration-500 */
