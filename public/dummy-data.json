@@ -60,7 +60,7 @@
     "description": "Create and manage email campaigns with automation.",
     "price": 10,
     "period": "monthly",
-    "tag": "popular",
+    "tag": "Popular",
     "tagType": "badge-success",
     "features": ["Email templates", "Automation workflows", "Open rate tracking"],
     "icon": "/products/operation.png"

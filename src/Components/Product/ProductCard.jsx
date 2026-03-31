@@ -1,16 +1,24 @@
 import React from 'react';
+import { BiColor } from 'react-icons/bi';
 
 const ProductCard = ({ card }) => {
     console.log('card', card);
+    const tagStyles = {
+        popular: "badge-warning",
+        "best seller": "badge-success",
+        new: "badge-info",
+        
+    };
 
     return (
-        <div className="card bg-base-400 h-full flex flex-col shadow-sm">
+        <div className="card bg-base-400 h-full flex flex-col shadow-sm hover:shadow-2xl transition-shadow duration-300">
             <div className="card-body">
 
                 <div className="">
                     {/* badge div */}
                     <div className="flex justify-end ">
-                        <p className="py-1 md:ml-60 ml-30 bg-yellow-300 rounded-full text-center">{card.tag}</p>
+                        {/* <p className="py-1 md:ml-60 ml-60 bg-yellow-300 rounded-full text-center">{card.tag}</p> */}
+                        <span className={`badge badge-xs text-white px-4 py-1 rounded-full ${tagStyles[card.tag]}`}>{card.tag}</span>
                     </div>
 
                     {/* image icon div */}
@@ -29,7 +37,7 @@ const ProductCard = ({ card }) => {
                     <span className="text-gray-500"><span className='font-extrabold text-2xl text-black'>${card.price}</span>/mo</span>
                     <ul className="mt-6 flex flex-col gap-2 font-semibold text-gray-500">
                         {
-                            card.features.map((item,i) => <li key={i}>
+                            card.features.map((item, i) => <li key={i}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                 <span>{item}</span>
                             </li>)
