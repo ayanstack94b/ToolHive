@@ -2,7 +2,6 @@ import React, { use } from 'react';
 import ProductCard from './ProductCard';
 
 const ProductList = ({ dataPromise, cart, setCart, handleAddToCart }) => {
-    // console.log('promise', dataPromise);
     const cardsData = use(dataPromise)
     return (
         <div className='md:container md:mx-auto'>

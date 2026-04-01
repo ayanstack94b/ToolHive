@@ -41,7 +41,6 @@ const DisplayProducts = () => {
 
                         </div>
                     </div>
-                    {/*     */}
                     {/* card-2 */}
                     <div className="bg-white px-6 py-10 border border-gray-200 rounded-lg relative max-w-xs mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300">
 
@@ -69,7 +68,6 @@ const DisplayProducts = () => {
 
                         </div>
                     </div>
-                    {/*     */}
                     {/* card-3 */}
                     <div className="bg-white px-6 py-10 border border-gray-200 rounded-lg relative max-w-xs mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300">
 

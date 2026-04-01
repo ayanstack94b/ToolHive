@@ -3,12 +3,10 @@ import { BiColor } from 'react-icons/bi';
 import Cart from '../Cart/Cart';
 
 const ProductCard = ({ card, handleAddToCart }) => {
-    // console.log('card', card);
     const tagStyles = {
         popular: "badge-warning",
         "best seller": "badge-success",
         new: "badge-info",
-
     };
 
     return (

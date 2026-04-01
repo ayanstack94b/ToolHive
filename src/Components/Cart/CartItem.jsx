@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CartItem = ({ cartItems, handleRemoveFromCart }) => {
-    // console.log('from cart items', cart, handleRemoveFromCart);
+
     return (
         <div>
             <div className="flex justify-between items-center md:p-5 max-h-screen">

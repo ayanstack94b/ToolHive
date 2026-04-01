@@ -9,13 +9,10 @@ const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart, handleRemoveF
     const [tab, setTab] = useState('products')
 
     const handleProductsBtn = (products) => {
-        // console.log('products clicked', products);
         return setTab(products)
     }
     const handleCartBtn = (cartData) => {
-        // console.log('cart clicked', cart);
         return setTab(cartData)
-
     }
 
     return (
@@ -34,13 +31,11 @@ const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart, handleRemoveF
 
                 <div className="container mx-auto w-6/12 flex items-center justify-center gap-4">
 
-
                     <button onClick={() => handleProductsBtn('products')}
                         className={`btn px-6 py-1 rounded-full ${tab === 'products'
-                                ? 'bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white'
-                                : 'bg-white text-black'
+                            ? 'bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white'
+                            : 'bg-white text-black'
                             }`}>Products</button>
-
 
                     <button onClick={() => handleCartBtn('cart')}
                         className={`btn px-8 py-1 rounded-full font-bold 
@@ -48,8 +43,8 @@ const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart, handleRemoveF
                                 ? 'bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white'
                                 : 'text - gray - 500 font-medium'
                             }`}>
-                            
-                            Cart<span>({cart.length})</span></button>
+
+                        Cart<span>({cart.length})</span></button>
 
                 </div>
             </section>

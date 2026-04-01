@@ -3,7 +3,7 @@ import CartItem from './CartItem';
 import { toast } from 'react-toastify';
 
 const Cart = ({ cart, setCart, handleRemoveFromCart }) => {
-    // console.log('cart data', cart.price);
+
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     const handleCheckOut=()=>{
         setCart([])
