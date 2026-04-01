@@ -16,8 +16,8 @@ const CartItem = ({ cartItems, handleRemoveFromCart }) => {
                     </div>
                     {/* delete button */}
                     <div className="">
-                        
-                        <p onClick={() => handleRemoveFromCart(cartItems.id)} className="text-red-600 font-bold">Remove</p>
+
+                        <p onClick={() => handleRemoveFromCart(cartItems.id)} className="text-red-600 font-bold cursor-pointer hover:text-red-400 transition-colors duration-200">Remove</p>
                     </div>
                 </div>
             </div>
