@@ -8,15 +8,17 @@ ToolHive allows users to browse different digital products, view details, and ma
 
 ## Technologies Used
 
-* React.js
-* Tailwind CSS
-* DaisyUI
-* JavaScript (ES6+)
-* React-Toastify
+* React.js  
+* Tailwind CSS  
+* DaisyUI  
+* JavaScript (ES6+)  
+* React-Toastify  
 * JSON (for product data)
 
 ## Features
 
-* Add products to cart with real-time navbar count
-* Remove products from cart with instant UI update
-* Dynamic total price calculation
+* Add products to cart with real-time navbar count  
+* Remove products from cart with instant UI update  
+* Dynamic total price calculation  
+* Toggle between product view and cart view  
+* Responsive steps section to guide users through the process  
