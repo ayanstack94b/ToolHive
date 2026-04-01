@@ -37,7 +37,7 @@ const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart, handleRemoveF
 
                     <button onClick={() => handleProductsBtn('products')}
                         className={`btn px-6 py-1 rounded-full ${tab === 'products'
-                                ? 'bg-gradient-to-r from-[#4f39f6] to-[#9514fa] text-white'
+                                ? 'bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white'
                                 : 'bg-white text-black'
                             }`}>Products</button>
 
@@ -45,7 +45,7 @@ const ToggleTabs = ({ dataPromise, cart, setCart, handleAddToCart, handleRemoveF
                     <button onClick={() => handleCartBtn('cart')}
                         className={`btn px-8 py-1 rounded-full font-bold 
                             ${tab === 'cart'
-                                ? 'bg-gradient-to-r from-[#4f39f6] to-[#9514fa] text-white'
+                                ? 'bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white'
                                 : 'text - gray - 500 font-medium'
                             }`}>
                             

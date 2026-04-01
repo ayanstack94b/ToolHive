@@ -4,12 +4,12 @@ import img2 from '../../../src/assets/package.png'
 import img3 from '../../../src/assets/rocket.png'
 const DisplayProducts = () => {
     return (
-        <div className='bg-base-200 min-h-screen w-full mb-10 p-5'>
+        <div className='bg-base-200  w-full p-5'>
             {/* container div */}
             <div className="max-w-6xl mx-auto px-4 ">
                 {/* header div */}
                 <div className="text-center space-y-2 md:my-10 ">
-                    <h1 className='text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent'> Get Started in 3 Steps</h1>
+                    <h1 className='text-3xl md:text-5xl font-bold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent'> Get Started in 3 Steps</h1>
                     <p className="text-gray-500 font-medium">Start using premium digital tools in minutes, not hours.</p>
                 </div>
                 {/* cards grid div */}

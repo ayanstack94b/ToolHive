@@ -10,7 +10,7 @@ import StaticPricing from './Components/StaticPricing/StaticPricing.jsx'
 import Footer from './Components/Footer/Footer.jsx'
 
 const fetchData = async () => {
-  const res = await fetch('/public/dummy-data.json')
+  const res = await fetch('/dummy-data.json')
   return res.json()
 }
 

@@ -12,44 +12,62 @@ const ProductCard = ({ card, handleAddToCart }) => {
     };
 
     return (
-        <div className="card bg-base-400 h-full flex flex-col shadow-sm hover:shadow-2xl transition-shadow duration-300">
-            <div className="card-body">
+        <div className="card bg-base-100 h-full flex flex-col shadow-sm hover:shadow-2xl transition-shadow duration-300">
 
-                <div className="">
-                    {/* badge div */}
-                    <div className="flex justify-end ">
-                        {/* <p className="py-1 md:ml-60 ml-60 bg-yellow-300 rounded-full text-center">{card.tag}</p> */}
-                        <span className={`badge badge-xs text-white px-4 py-1 rounded-full ${tagStyles[card.tag]}`}>{card.tag}</span>
+            <div className="card-body flex flex-col">
+
+                {/* top section */}
+                <div className="flex justify-between items-start">
+
+                    {/* icon */}
+                    <div className="bg-base-200 w-12 h-12 flex justify-center items-center rounded-full">
+                        <img src={card.icon} className="w-6 h-6" alt={card.name} />
                     </div>
 
-                    {/* image icon div */}
-                    <div className="bg-base-200 border-0 w-15 h-15 flex justify-center items-center rounded-full">
-                        <img src={card.icon} className='w-7 h-7 ' alt={card.name} />
-                    </div>
+                    {/* badge */}
+                    <span className={`badge badge-sm text-white px-3 py-1 rounded-full ${tagStyles[card.tag]}`}>
+                        {card.tag}
+                    </span>
 
                 </div>
-                <div className="my-10 space-y-5">
-                    <h2 className="text-3xl font-bold">{card.name}</h2>
-                    <p className="text-gray-500 w-70">{card.description}</p>
 
+                {/* content */}
+                <div className="my-6 space-y-4">
+                    <h2 className="text-2xl font-bold">{card.name}</h2>
+                    <p className="text-gray-500 text-sm">{card.description}</p>
                 </div>
-                {/* list div */}
-                <div className="">
-                    <span className="text-gray-500"><span className='font-extrabold text-2xl text-black'>${card.price}</span>/mo</span>
-                    <ul className="mt-6 flex flex-col gap-2 font-semibold text-gray-500">
-                        {
-                            card.features.map((item, i) => <li key={i}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+
+                {/* price + features */}
+                <div>
+                    <span className="text-gray-500 text-sm">
+                        <span className="font-extrabold text-2xl text-black">
+                            ${card.price}
+                        </span>
+                        /mo
+                    </span>
+
+                    <ul className="mt-4 flex flex-col gap-2 text-sm text-gray-500">
+                        {card.features.map((item, i) => (
+                            <li key={i} className="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                </svg>
                                 <span>{item}</span>
-                            </li>)
-                        }
-
+                            </li>
+                        ))}
                     </ul>
                 </div>
-                {/* button div */}
-                <div className="mt-6">
-                    <button onClick={() => handleAddToCart(card)} className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white  hover:opacity-70 transition-opacity duration-500 w-full rounded-full">Buy now</button>
+
+                {/* button */}
+                <div className="mt-auto pt-6">
+                    <button
+                        onClick={() => handleAddToCart(card)}
+                        className="btn w-full rounded-full bg-gradient-to-r from-[#4f39f6] to-[#9514fa] text-white hover:opacity-80 transition"
+                    >
+                        Buy now
+                    </button>
                 </div>
+
             </div>
         </div>
     );
