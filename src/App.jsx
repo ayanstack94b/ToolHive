@@ -7,6 +7,7 @@ import DisplayProducts from './Components/DisplayProducts/DisplayProducts.jsx'
 import ToggleTabs from './Components/ToggleTabs/ToggleTabs'
 import { toast } from 'react-toastify';
 import StaticPricing from './Components/StaticPricing/StaticPricing.jsx'
+import Footer from './Components/Footer/Footer.jsx'
 
 const fetchData = async () => {
   const res = await fetch('/public/dummy-data.json')
@@ -60,7 +61,9 @@ function App() {
         <StaticPricing></StaticPricing>
 
       </main>
-
+      <footer>
+        <Footer></Footer>
+      </footer>
 
     </>
   )
