@@ -3,6 +3,7 @@ import './App.css'
 import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
 import Stats from './Components/Stats/Stats'
+import DisplayProducts from './Components/DisplayProducts/DisplayProducts.jsx'
 import ToggleTabs from './Components/ToggleTabs/ToggleTabs'
 import { toast } from 'react-toastify';
 
@@ -19,7 +20,7 @@ function App() {
 
   const handleAddToCart = (cards) => {
     const exists = cart.some(item => item.id === cards.id);
-    
+
     if (exists) {
       toast.warning("Item already in cart");
       return;
@@ -29,7 +30,7 @@ function App() {
 
     setCart(newCartState)
   }
-  
+
   const handleRemoveFromCart = (id) => {
     console.log('deleted', id, cart);
     const newCart = cart.filter((item) => item.id !== id)
@@ -53,6 +54,9 @@ function App() {
         }>
           <ToggleTabs handleAddToCart={handleAddToCart} handleRemoveFromCart={handleRemoveFromCart} cart={cart} setCart={setCart} dataPromise={dataPromise}></ToggleTabs>
         </Suspense>
+
+        <DisplayProducts></DisplayProducts>
+
       </main>
 
 
